@@ -1,89 +1,125 @@
 <!--
-    form
-    input
-    textarea
-    select
-    button
-    option
-    label
+    form      (V)
+    input     (V)
+    textarea  (V)
+    select    (V)
+    button    (V)
+    option    (V)
+    label     (V)
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="id">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Practice 2</title>
     </head>
     <body>
         <h1>PRACTICE 2</h1>
+        <p>Implementasi HTML Form Element dan Input Attributes</p>
+        <h1>Data Diri Mahasiswa</h1>
+        <br><br>
 
+        <!--form-->
         <form action="data.php">
-            <label>Nama</label>
-            <input type="text" id="nama" name="nama"><br>
-
-            <!--button-->
-
-            <!--checkbox-->
-            <br><label>Data yang ada</label><br>
-            <input type="checkbox" id="ktp" name="ktp" value="KTP">
-            <label for="ktp">Scan KTP</label><br>
-            <input type="checkbox" id="ktp" name="ijazah" value="Ijazah">
-            <label for="ijazah">Scan Ijazah SMA/sederajat</label><br>
-            <input type="checkbox" id="serti" name="serti" value="Sertifikat">
-            <label for="serti">Sertifikat Tambahan</label><br>
-
-            <!--color-->
-
+            <!--image-->
+            <input type="image" src="images/logo.png" width="200"><br><br><br>
+            <h2>Data Pribadi</h2>
+            <!--text-->
+            <label for="name">Nama Lengkap </label>
+            <input type="text" id="nama" name="nama"><br><br>
+            <!--number-->
+            <label for="nim">NIM </label>
+            <input type="number" id="nim" name="nim"><br><br>
             <!--date-->
             <label for="lahir">Tanggal Lahir </label>
-            <input type="date" id="lahir" name="lahir"><br>
-            <!--datetime-local-->
-
-            <!--email-->
-
-            <!--file-->
-
-            <!--hidden-->
-
-            <!--image-->
-
-            <!--month-->
-
+            <input type="date" id="lahir" name="lahir"><br><br>
             <!--number-->
-
-            <!--password-->
-            <label>Input Password </label>
-            <input type="password" id="pass" name="pass" placeholder="password 6 kata"><br>
+            <label for="umur">Umur </label>
+            <input type="number" id="umur" name="umur"><br><br>
             <!--radio-->
-            <label>Jenis Kelamin</label><br>
+            <label>Jenis Kelamin</label>
             <input type="radio" id="laki" name="kel">
             <label for="laki">Laki-Laki</label>
             <input type="radio" id="perempuan" name="kel">
             <label for="perempuan">Perempuan</label>
             <input type="radio" id="other" name="kel">
-            <label for="other">Other</label>
-
-            <!--range-->
-
-            <!--reset-->
-
-            <!--search-->
-
-            <!--submit-->
-            <br><br><input type="submit" value="Submit Data"><br>
-
+            <label for="other">Other</label><br><br>
+            <!--textarea-->
+            <label for="alamat">Alamat </label>
+            <textarea name="alamat" id="alamat" cols="30" rows="2"></textarea><br><br>
             <!--tel-->
-
-            <!--text-->
-
-            <!--time-->
-
+            <label for="telp">Handphone </label>
+            <input type="tel" id="telp" name="telp"><br><br>
+            <!--email-->
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email"><br><br>
             <!--url-->
+            <label for="sosmed">Link Sosial Media </label>
+            <input type="url" id="sosmed" name="sosmed"><br><br>
 
+
+            <h2>Data Perkuliahan</h2>
+            <!--text-->
+            <label for="uname">Username </label>
+            <input type="text" id="uname" name="uname"><br><br>
+            <!--password-->
+            <label>Password </label>
+            <input type="password" id="pass" name="pass" placeholder="password min 6 kata"><br><br>
+            <!--select & option-->
+            <label for="Dosen">Wali Dosen  : </label>
+            <select name="Dosen" name="Dosen">
+                <option value="ABA">Amalia Beladinna Arifa, S.Pd., M.Cs.</option>
+                <option value="THY">Trihastuti Yuniati, S.Kom., M.T.</option>
+                <option value="API">Agi Prasetiadi, S.T., M.Eng.</option>
+                <option value="PRD">Paradise, M.Kom.</Option>
+                <option value="PAR">Pradana Ananda Raharja, S.Kom., M.Kom.</option>
+                <option value="AGZ">Anggi Zafia, S.T., M.Eng.</Option>
+            </select><br><br>
+
+
+            <h2>Data Tambahan</h2>
+            <!--file-->
+            <label for="upktp">Upload KTP </label>
+            <input type="file" id="uktp" name="uktp"><br><br>
+            <label for="upijazah">Upload Ijazah </label>
+            <input type="file" id="uijazah" name="uijazah"><br><br>
+            <label for="userti">Upload Sertifikat </label>
+            <input type="file" id="userti" name="userti"><br>
+            <!--checkbox-->
+            <br><label>Data yang sudah terupload</label><br>
+            <input type="checkbox" id="ktp" name="ktp" value="KTP">
+            <label for="ktp">Scan KTP</label><br>
+            <input type="checkbox" id="ktp" name="ijazah" value="Ijazah">
+            <label for="ijazah">Scan Ijazah SMA/sederajat</label><br>
+            <input type="checkbox" id="serti" name="serti" value="Sertifikat">
+            <label for="serti">Sertifikat Tambahan</label><br><br>
+
+
+            <h2>Kelengkapan Data</h2>
+            <!--range-->
+            <label for="lengkap">Kelengkapan Data </label>
+            <input type="range" name="lengkap" id="lengkap" min="1" max="100" step="10"><br><br>
+            
+            <!--reset-->
+            <input type="reset" value="Reset">
+            <!--button & submit-->
+            <button type="submit">Simpan</button>
+
+            <!--color-->
+            <!--datetime-local-->
+            <!--hidden-->
+            <!--month-->
+            <!--search-->
+            <!--time-->
             <!--week-->
         </form>
 
+        <br><br>
         <p><strong>Nama  : Amalia Suciati</strong><p>
         <p><strong>NIM   : 21102069</strong><p>
         <p><strong>Kelas : IF-09 SC 1</strong><p>
+
     </body>
 </html>
