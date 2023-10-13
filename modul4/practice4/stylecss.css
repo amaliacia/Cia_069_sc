@@ -1,0 +1,51 @@
+body {
+  /* display: flex; */
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+}
+ 
+.hero-image {
+   background: url(image/background.jpg) no-repeat center; 
+   background-size: cover;
+   height: 500px;
+   width: 100%;
+}
+ 
+.hero-text {
+   text-align: center;
+ /*  top: 30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: inherit; */
+   width: 100%;
+   position: absolute;
+   top: 40%;
+   left: 0;
+   color: white;
+}
+
+
+.polaroid {
+   background-color: white;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   margin: 10px;
+   width: 250px;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+   text-align: center;
+
+}
+
+.polaroid img {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+}
+
+.polaroid p {
+   margin: 10px;
+}
