@@ -6,7 +6,7 @@
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
     margin-bottom: 0;
-    background-color: #6c6a6a;
+    background-color: #bcb2b2;
   }
   @media (min-width: 768px) {
     .jumbotron {
