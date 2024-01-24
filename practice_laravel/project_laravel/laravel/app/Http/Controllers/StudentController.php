@@ -34,7 +34,6 @@ class StudentController extends Controller
         {
             $extFile = $request->image->getClientOriginalExtension();
             $namaFile = 'user-'.time().".".$extFile;
-            File::delete($mahasiswa->image);
             $path = $request->image->move('assets/images',$namaFile);
             $mahasiswa->image = $path;
         }
@@ -70,12 +69,23 @@ class StudentController extends Controller
         'jenis_kelamin' => 'required|in:P,L',
         'jurusan' => 'required',
         'alamat' => '',
+        'image' => 'file|image|max:1000',
         ]);
         $student->nim = $validateData['nim'];
         $student->name = $validateData['nama'];
         $student->gender = $validateData['jenis_kelamin'];
         $student->departement = $validateData['jurusan'];
         $student->address = $validateData['alamat'];
+        
+        if($request->hasFile('image'))
+        {
+            $extFile = $request->image->getClientOriginalExtension();
+            $namaFile = 'user-'.time().".".$extFile;
+            File::delete($student->image);
+            $path = $request->image->move('assets/images',$namaFile);
+            $student->image = $path;
+        }
+
         $student->save();
         $request->session()->flash('pesan','Perubahan data berhasil');
         return redirect()->route('student.show',['student' => $student->id]);
